@@ -3,15 +3,17 @@
 
     /* ### Primary */
     
-    --Dark-cyan: hsl(185, 75%, 39%);
-    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
-    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-cyan: #19a2ae;
+    --Very-dark-desaturated-blue: #2d3248;
+    --Dark-grayish-blue: #6a6f81;
+    --line-color: #e8e9ec;
     
     /* ### Neutral */
     
-    --Dark-gray: hsl(0, 0%, 59%);
-
+    --Dark-gray: #969696;
     --white: #fff;
+
+    --font-Kumbh: "Kumbh Sans", serif;
 }
 
 /* general config */
@@ -21,6 +23,7 @@
     outline: 0;
     box-sizing: border-box;
     overflow: hidden;
+    font-family: var(--font-Kumbh);
 }
 
 body {
@@ -42,6 +45,13 @@ body {
     left: -60%;
 }
 
+@media screen and (min-width: 1000px) {
+    .bg-top{
+        top: -43%;
+        left: -45%;
+    }
+}
+
 .bg-bottom {
     width: 100%;
     height: 100%;
@@ -56,10 +66,93 @@ body {
     width: 90%;
     max-width: 350px;
     border-radius: 15px;
+    position: relative;
 }
 
 .container .bg-card {
     width: 100%;
     height: 140px;
     background: url(../images/bg-pattern-card.svg) no-repeat center/ cover;
+}
+
+.container .txt-card {
+    text-align: center;
+}
+
+.container .txt-card .img-victor {
+    background: url(../images/image-victor.jpg) no-repeat center / cover;
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    border: 5px solid var(--white);
+    position: absolute;
+    top: 25%;
+    left: 36.2%;
+}
+
+.container .txt-card .name {
+    margin: 64px 0 8px 0;
+}
+
+.container .txt-card .name h1 {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.container .txt-card .name h1 span {
+    font-weight: 400;
+    color: var(--Dark-grayish-blue);
+    margin-left: 8px;
+}
+
+.container .txt-card h2 {
+    font-size: 14px;
+    color: var(--Dark-grayish-blue);
+    margin-bottom: 24px;
+}
+
+.container .txt-card .line{
+    width: 100%;
+    height: 1px;
+    background-color: var(--line-color);
+}
+
+.container .txt-card .description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 41px;
+}
+
+.container .txt-card .description .des {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.container .txt-card .description .des .number {
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--Very-dark-desaturated-blue);
+}
+
+.container .txt-card .description .des .txt {
+    font-weight: 400;
+    font-size: 10px;
+    color: var(--Dark-grayish-blue);
+    letter-spacing: 1.5px;
+}
+
+.attribution { 
+    font-size: 14px; 
+    text-align: center; 
+    margin-top: 25px;
+    font-weight: 500;
+    position: relative;
+    z-index: 888;
+}
+.attribution a { 
+    color: var(--Very-dark-desaturated-blue);
+    text-decoration: none;
 }
